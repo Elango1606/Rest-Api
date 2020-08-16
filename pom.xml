@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.spring.hibernate</groupId>
+  <artifactId>security.restapi.aop</artifactId>
+  <version>1.0</version>
+  <packaging>war</packaging>
+
+  <name>security.restapi.aop Maven Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+    <springframework.version>5.2.2.RELEASE</springframework.version>		
+	<springsecurity.version>5.2.2.RELEASE</springsecurity.version>
+	<hibernate.version>5.4.14.Final</hibernate.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    
+<!-- Spring MVC support -->
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-webmvc</artifactId>
+					<version>${springframework.version}</version>
+				</dependency>
+				
+				<!-- Spring Security web -->
+				<dependency>
+					<groupId>org.springframework.security</groupId>
+					<artifactId>spring-security-web</artifactId>
+					<version>5.2.2.RELEASE</version>
+				</dependency>
+				
+				<!-- Spring security config -->
+				<dependency>
+					<groupId>org.springframework.security</groupId>
+					<artifactId>spring-security-config</artifactId>
+					<version>5.2.2.RELEASE</version>
+				</dependency>
+
+				<!-- Servlet, JSP and JSTL support  for Sping AbstractAnnotatedConfigDSI-->
+				<dependency>
+					<groupId>javax.servlet</groupId>
+					<artifactId>javax.servlet-api</artifactId>
+					<version>3.1.0</version>
+				</dependency>
+				
+				<!-- Spring security taglibs -->
+				<dependency>
+					<groupId>org.springframework.security</groupId>
+					<artifactId>spring-security-taglibs</artifactId>
+					<version>${springsecurity.version}</version>
+				</dependency>
+				
+				<!-- sql connector -->
+				<dependency>
+					<groupId>mysql</groupId>
+					<artifactId>mysql-connector-java</artifactId>
+					<version>5.1.45</version>
+				</dependency>
+				
+				<!-- C3P0 connection Pool-->
+				<dependency>
+					<groupId>com.mchange</groupId>
+					<artifactId>c3p0</artifactId>
+					<version>0.9.5.2</version>
+				</dependency>
+
+				<!-- JSP API -->
+				<dependency>
+					<groupId>javax.servlet.jsp</groupId>
+					<artifactId>javax.servlet.jsp-api</artifactId>
+					<version>2.3.1</version>
+				</dependency>
+
+				<!-- Java Standard tag libarary -->
+				<dependency>
+					<groupId>javax.servlet</groupId>
+					<artifactId>jstl</artifactId>
+					<version>1.2</version>
+				</dependency>
+
+				<!-- to compensate for java 9+ not including jaxb -->
+				<dependency>
+					<groupId>javax.xml.bind</groupId>
+					<artifactId>jaxb-api</artifactId>
+					<version>2.3.0</version>
+				</dependency>
+
+				<!-- Spring Transactions -->
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-tx</artifactId>
+					<version>${springframework.version}</version>
+				</dependency>
+
+				<!-- Spring ORM -->
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-orm</artifactId>
+					<version>${springframework.version}</version>
+				</dependency>
+				 
+				<!-- Hibernate Core -->
+				<dependency>
+					<groupId>org.hibernate</groupId>
+					<artifactId>hibernate-core</artifactId>
+					<version>${hibernate.version}</version>
+				</dependency>
+				 
+				 <!-- Hibernate Validator -->
+				<dependency>
+					 <groupId>org.hibernate</groupId>
+					 <artifactId>hibernate-validator</artifactId>
+					 <version>6.0.7.Final</version>
+				</dependency>
+				 
+				<!-- Junit -->
+				<dependency>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+					<version>3.8.1</version>
+					<scope>test</scope>
+				</dependency>
+				
+				<!-- Jackson API -->
+				<dependency>
+					<groupId>com.fasterxml.jackson.core</groupId>
+					<artifactId>jackson-databind</artifactId>
+					<version>2.11.1</version>
+				</dependency>    
+  </dependencies>
+
+  <build>
+    <finalName> RealTimeProject </finalName>	
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-war-plugin</artifactId>
+							<version>3.3.0</version>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+  </build>
+</project>
